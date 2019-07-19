@@ -6,7 +6,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +20,13 @@ public class Note {
     private int id;
     private String name;
     @ColumnInfo(name = "date_updated")
-    private LocalDateTime dateUpdated;
+    private Date dateUpdated;
     private String text;
+
+    public Note(int id, String name, Date dateUpdated, String text) {
+        this.id = id;
+        this.name = name;
+        this.dateUpdated = dateUpdated;
+        this.text = text;
+    }
 }
