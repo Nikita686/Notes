@@ -20,7 +20,7 @@ android {
 }
 
 ext {
-    roomVersion = '2.1.0-alpha06'
+    roomVersion = '2.1.0'
     archLifecycleVersion = '2.0.0'
 }
 
