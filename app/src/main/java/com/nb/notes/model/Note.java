@@ -6,8 +6,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.Date;
-
 import lombok.Builder;
 import lombok.Data;
 
@@ -20,10 +18,10 @@ public class Note {
     private int id;
     private String name;
     @ColumnInfo(name = "date_updated")
-    private Date dateUpdated;
+    private String dateUpdated;
     private String text;
 
-    public Note(int id, String name, Date dateUpdated, String text) {
+    public Note(int id, String name, String dateUpdated, String text) {
         this.id = id;
         this.name = name;
         this.dateUpdated = dateUpdated;
